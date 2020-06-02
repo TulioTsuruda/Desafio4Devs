@@ -1,0 +1,20 @@
+.get-start {
+    padding: 80px;
+}
+
+.form-login {
+    width: 400px;
+    margin: auto;
+    padding-top: 80px;
+}
+
+.card-login  { 
+    border-radius: 5px;
+    box-shadow: 1px 1px 5px #cccccc;
+    background-color: aliceblue;
+    padding: 30px;
+}
+
+.relative {
+    position: relative;
+}
