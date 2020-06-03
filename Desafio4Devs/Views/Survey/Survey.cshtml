@@ -1,0 +1,105 @@
+﻿@using Desafio4Devs.Models
+@model Survey
+
+@{
+    ViewData["Title"] = "Survey";
+}
+
+<script src="~/js/jquery-3.4.1.min.js"></script>
+<script src="~/js/Bridge/Survey.js"></script>
+
+<h1>Pesquisa</h1>
+
+<form class="form-survey" id="formSurvey">
+    <div class="form-group col-sm-2">
+        <label for="ID">ID</label>
+        @Html.TextBoxFor(x => x.ID, new
+           {
+               @class = "form-control"
+           })
+        <small id="emailHelp" class="form-text text-muted">*Campo temporário até criar o Banco</small>
+    </div>
+    <div class="form-group">
+        <label for="nomeCliente">Nome do cliente</label>
+        @Html.TextBoxFor(x => x.nomeCliente, new
+           {
+               @class = "form-control",
+               @placeholder = "Razão social ou Nome fantasia",
+               @type = "email"
+           })
+        <small id="emailHelp" class="form-text text-muted">*Obrigatório</small>
+    </div>
+
+    <div class="form-row form-group">
+        <div class="col">
+            <label for="cnpj">CNPJ</label>
+            @Html.TextBoxFor(x => x.cnpj, new
+       {
+           @class = "form-control",
+           @placeholder = "12345678/1234-12",
+           @pattern = "[0-9]{8}/[0-9]{4}-[0-9]{2}"
+       })
+        </div>
+        <div class="col">
+            <label for="dataCliente">Data em que se tornou cliente</label>
+            @Html.TextBoxFor(x => x.data, new
+       {
+           @class = "form-control",
+           @Type = "date"
+
+       })
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label for="nomeContato">Nome da pessoa de contato</label>
+        @Html.TextBoxFor(x => x.nomeContato, new
+           {
+               @class = "form-control",
+               @placeholder = "Responsável"
+           })
+        <small id="emailHelp" class="form-text text-muted">*Obrigatório</small>
+    </div>
+
+
+    <div class="form-row form-group">
+        <!--
+            Choosing Grade
+
+            Promotor: Nota 9 ou 10
+            Neutro: Nota 7 ou 8
+            Detrator: Nota de 0 a 6
+            Nenhum: Para casos onde o cliente ainda não tenha participado de uma avaliação
+        -->
+        <div class="col-lg-10">
+            <label for="scale">
+                Em uma escala de 0 a 10, qual a
+                probabilidade de
+                você recomendar nosso produto/serviço a um amigo/conhecido?
+            </label>
+        </div>
+        <div class="col">
+            @Html.TextBoxFor(x => x.scale, new
+            {
+                @class = "form-control",
+                @Type = "number",
+                @min = "0",
+                @max = "10",
+                @placeholder = "0-10"
+            })
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label for="motivo">Qual é o motivo dessa nota?</label>
+
+        @Html.TextAreaFor(x => x.motivo, new
+        {
+            @class = "form-control",
+            @row = "3"
+        })
+    </div>
+
+    <button class="btn btn-primary btn-lg" id="save">Salvar</button>
+
+</form>

@@ -1,0 +1,34 @@
+﻿@using Desafio4Devs.Models
+@model Login
+
+
+@{
+    ViewData["Title"] = "Sign In";
+}
+
+<script src="~/js/jquery-3.4.1.min.js"></script>
+<script src="~/js/Bridge/Signin.js"></script>
+
+<form class="form-login" id="formLogin">
+    <div class="card-login">
+        <div class="col ">
+            <div class="form-group">
+                <label for="usuario">Usuário</label>
+                @Html.TextBoxFor(x => x.acesso, new
+                {
+                    @class = "form-control",
+                    @placeholder = "Usuário, E-mail ou CPF (só números)"
+                })
+
+            </div>
+            <div class="form-group">
+                <label for="password">Senha</label>
+                @Html.PasswordFor(x => x.password, new { @class = "form-control", @placeholder = "Senha" })
+            </div>
+        </div>
+
+        <div class="col-md-3">
+            <button class="btn btn-primary btn-lg" id="login">Login</button>
+        </div>
+    </div>
+</form>
