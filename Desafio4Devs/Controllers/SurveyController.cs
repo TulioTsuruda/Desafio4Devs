@@ -14,10 +14,13 @@ namespace Desafio4Devs.Controllers
     {
         private readonly ISurveyService _surveyService;
 
+        static Survey _holdData { get; set; }
+
         public SurveyController()
         {
             _surveyService = new SurveyService();
         }
+
         [HttpGet]
         public ActionResult Survey()
         {
@@ -25,9 +28,28 @@ namespace Desafio4Devs.Controllers
         }
 
         [HttpGet]
+        public ActionResult Cliente()
+        {
+            return View();
+        }
+
+        [HttpGet]
+        public ActionResult CreateCliente()
+        {
+            return View();
+        }
+
+
+        [HttpGet]
         public ActionResult Saved()
         {
             return View();
+        }
+
+        public Survey NextStep(Survey next)
+        {
+            //Guardar os dados do cliente escolhido
+            return _holdData = next;
         }
 
         [HttpPost]
@@ -35,7 +57,9 @@ namespace Desafio4Devs.Controllers
         {
             try
             {
-                _surveyService.addSurvey(addSurvey);
+                _holdData.scale = addSurvey.scale; //Pega a noto escolhida
+                _holdData.motivo = addSurvey.motivo; //Pega o motivo da nota
+                _surveyService.addSurvey(_holdData);
                 return true;
             }
             catch

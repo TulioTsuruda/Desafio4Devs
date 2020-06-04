@@ -10,7 +10,7 @@ namespace Desafio4Devs.Repository
     public class SurveyRepository : ISurveyRepository
     {
         //Tabela para salvar as pesquisas temporariamente
-        private List<Survey> SurveyList = new List<Survey>
+        private static List<Survey> SurveyList = new List<Survey>
         {
 
         };

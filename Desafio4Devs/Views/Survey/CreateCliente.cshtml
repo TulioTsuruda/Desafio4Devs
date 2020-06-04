@@ -1,0 +1,53 @@
+﻿@using Desafio4Devs.Models
+@model Cliente
+
+@{
+    ViewData["Title"] = "CreateCliente";
+}
+
+<script src="~/js/jquery-3.4.1.min.js"></script>
+<script src="~/js/Bridge/Cliente.js"></script>
+
+<div class="text-center ">
+    <h1>Preencha o dados do Cliente</h1>
+</div>
+
+<form class="form-survey" id="formSurvey">
+
+    <div class="form-row">
+        <div class="col-sm-3">
+            <label for="ID">ID</label>
+            @Html.TextBoxFor(x => x.ID, new
+               {
+                   @class = "form-control",
+                   @type = "number"
+               })
+            <small id="id" class="form-text text-muted">*Campo temporário até criar o Banco</small>
+        </div>
+    </div>
+
+
+    <div class="form-row form-group">
+        <div class="col-md-3">
+            <label for="cnpj">CNPJ</label>
+            @Html.TextBoxFor(x => x.cnpj, new
+       {
+           @class = "form-control",
+           @placeholder = "12345678/1234-12",
+           @pattern = "[0-9]{8}/[0-9]{4}-[0-9]{2}"
+       })
+        </div>
+        <div class="col">
+            <label for="nomeCliente">Nome do cliente</label>
+            @Html.TextBoxFor(x => x.nomeCliente, new
+               {
+                   @class = "form-control",
+                   @placeholder = "Razão social ou Nome fantasia",
+                   @type = "email"
+               })
+            <small id="nomeCliente" class="form-text text-muted">*Obrigatório</small>
+        </div>
+    </div>
+
+    <button class="btn btn-primary btn-lg" id="create">Criar</button>
+</form>

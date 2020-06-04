@@ -110,5 +110,7 @@ C:\Users\VersusChrist\Desktop\Desafio4DevsHtml-CSS\Desafio4Devs\Desafio4Devs\obj
 C:\Users\VersusChrist\Desktop\Desafio4DevsHtml-CSS\Desafio4Devs\Desafio4Devs\obj\Debug\netcoreapp3.1\Desafio4Devs.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\VersusChrist\Desktop\Desafio4DevsHtml-CSS\Desafio4Devs\Desafio4Devs\obj\Debug\netcoreapp3.1\Razor\Views\Login\Signin.cshtml.g.cs
 C:\Users\VersusChrist\Desktop\Desafio4DevsHtml-CSS\Desafio4Devs\Desafio4Devs\obj\Debug\netcoreapp3.1\Razor\Views\Login\Signup.cshtml.g.cs
-C:\Users\VersusChrist\Desktop\Desafio4DevsHtml-CSS\Desafio4Devs\Desafio4Devs\obj\Debug\netcoreapp3.1\Razor\Views\Survey\Survey.cshtml.g.cs
 C:\Users\VersusChrist\Desktop\Desafio4DevsHtml-CSS\Desafio4Devs\Desafio4Devs\obj\Debug\netcoreapp3.1\Razor\Views\Survey\saved.cshtml.g.cs
+C:\Users\VersusChrist\Desktop\Desafio4DevsHtml-CSS\Desafio4Devs\Desafio4Devs\obj\Debug\netcoreapp3.1\Razor\Views\Survey\Cliente.cshtml.g.cs
+C:\Users\VersusChrist\Desktop\Desafio4DevsHtml-CSS\Desafio4Devs\Desafio4Devs\obj\Debug\netcoreapp3.1\Razor\Views\Survey\CreateCliente.cshtml.g.cs
+C:\Users\VersusChrist\Desktop\Desafio4DevsHtml-CSS\Desafio4Devs\Desafio4Devs\obj\Debug\netcoreapp3.1\Razor\Views\Survey\Survey.cshtml.g.cs
